@@ -79,15 +79,3 @@ function backSpace()
     document.getElementById('provided-pin').value = inputDigit;
 }
 
-
-
-// function backSpace()
-// {
-//     var providedPinVal = document.getElementById('provided-pin').value;
-//     var providedPinValStr = providedPinVal.toString();
-//     var array = Array.from(providedPinValStr);
-//     array.pop();
-//     var newVal = array.join('');
-//     console.log(newVal);
-//     document.getElementById('provided-pin').value = newVal;
-// }

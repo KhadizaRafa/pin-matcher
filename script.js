@@ -28,7 +28,7 @@ function matchPin()
         displayStyleBlock('rightPin',true);
         displayStyleBlock('wrongPin',false);
         displayStyleBlock('retryPin',false);
-
+        retryPinCount = 3;
     }
     else{
         retryPinCount = retryPinCount - 1;
@@ -47,7 +47,6 @@ function matchPin()
             document.getElementById('retryPin').innerText = 'No more retry allowed for this session';
         }
     }
-    clearPin('view-pin');
     clearPin('provided-pin');
 
 }
@@ -61,10 +60,7 @@ function displayStyleBlock(id,isBlock)
 }
 function clearPin(id)
 {
-    if(id=='provided-pin')
-    {
-        inputDigit='';
-    }
+    inputDigit='';
     document.getElementById(id).value = "";
 }
 
@@ -78,4 +74,3 @@ function backSpace()
     }
     document.getElementById('provided-pin').value = inputDigit;
 }
-
